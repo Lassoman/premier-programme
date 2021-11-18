@@ -1,38 +1,29 @@
 
-
-//Condition IF ELSE
-
-// let heure = 13;
-
-//heure == 11
-//heure != 11  verifie si heure est différent de 11
-//heure < 11
-//heure > 11
-//heure <= 11
-//heure >= 11
+//SWITCH
 
 
-// if(heure < 12){
-//     console.log('C\'est le matin ')
-// }
-// else if(heure <=18){
-//     console.log("c'est l'apres-midi")
-// }
-// else{
-//     console.log('C\'est la soirée')
-// }
+let consommable = "voiture";
 
-// age
-// si -18 : vous n'estes pas majeur
-// si age entre 18 et 20 : vous etes majeur en france
-// si +21: vous etes majeur partout, à vous les casinos!
+switch(consommable){
 
-let age = 21
+    case "tomates":
+    case "carotte":
+    case "oignons" :
+        console.log("ceci est un légume!");
+        break;
 
-if(age<18){
-    console.log("Vous êtes pas majeur")
-}else if(age>= 18 && age<=20){
-    console.log("Vous etes majeur en France")
-}else{
-    console.log("vous etes majeur partout, à vous les casinos!")
+    case "orange":
+    case "banane" :
+        console.log("ceci est un fruit!");
+        break;
+
+    case "eau" :
+        console.log("ceci est à boire!")
+        break;
+
+    case "pates" :
+        console.log("ceci est un féculent!")
+        break;
+    default:
+        console.log("ceci n'est pas un aliment connu !")
 }
