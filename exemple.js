@@ -1,4 +1,4 @@
-//LES BOUCLES
+//LES BOUCLES WHILE
 
 let i = 1;
 
