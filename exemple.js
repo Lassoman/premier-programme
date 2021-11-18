@@ -2,28 +2,38 @@
 //SWITCH
 
 
-let consommable = "voiture";
+let gareDeDepart = "Villemomble";
+let gareDarrivee = "";
+let chauffeur = "";
 
-switch(consommable){
+// 1ER EXAMPLE
 
-    case "tomates":
-    case "carotte":
-    case "oignons" :
-        console.log("ceci est un légume!");
-        break;
+// si la valeur de la variable est diffrent d'une entrée vide alors on peut demarrer le train
+// if (gareDeDepart != ""){
+//     if(gareDarrivee != ""){
+//     console.log('Le train va démarrer.');
+//     }
+// }
 
-    case "orange":
-    case "banane" :
-        console.log("ceci est un fruit!");
-        break;
 
-    case "eau" :
-        console.log("ceci est à boire!")
-        break;
 
-    case "pates" :
-        console.log("ceci est un féculent!")
-        break;
-    default:
-        console.log("ceci n'est pas un aliment connu !")
+//si la condition A et la condition B....
+// if (gareDeDepart != "" && gareDarrivee != "" ){
+//     console.log('Le train va démarrer.');
+//     }else{
+//     console.log('le train ne peut pas démarrer pas');
+// }
+
+
+//si la condition A ou la condition B
+// if (gareDeDepart != "" || gareDarrivee != "" ){
+//     console.log('Le train va démarrer.');
+//     }else{
+//     console.log('le train ne peut pas démarrer pas');
+// }
+
+if ((gareDeDepart != "" || gareDarrivee != "" ) && chauffeur !=""){
+    console.log('Le train va démarrer.');
+    }else{
+    console.log('le train ne peut pas démarrer pas');
 }
