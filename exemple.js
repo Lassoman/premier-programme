@@ -1,52 +1,12 @@
-// LES EXCEPTIONS
-
-
-
-// if(){
-
-// }else{
-
-// }
-
-// le "if et else" que l'on connaît deviens try et catch
-// try {
-//     //javascript va chercher si dans ce block il y a eu une erreur
-//     alert(hello);
-// } catch(error){
-//     //si il y a une erreur dans le block d'en haut Js va executer les instruction qui sont dans le block catch
-//     alert("la variable Hello n'existe pas");
-// }
-
-
 
 
 do {
-    try {
     
-        var recompense = prompt("Choisissez une récompense : épée, arc, haches");
-        var degats;
-    
-        switch(recompense) {
-            case 'épée':
-                degats = 40;
-                break;
-            case 'arc':
-                degats = 30;
-                break;
-            case 'haches':
-                degats = 20;
-                break;
-            default:
-                throw new Error("Vous ne pouvez pas tricher")
-        }
-        alert("Vous avez choisi : "+ recompense+ "(" + degats + " degats ).");
-    } catch(error){
-        alert(error);
-    }
-    finally{
-        alert('fin du programme')
-    }
-} while (recompense == "" || recompense == null);
+    var choix = Number(prompt("Que souhaitez vous faire ? :\n\n1-addition \n2-Multiplication \n3-Soustraction \n4-Division"));
+    } while (choix != 1  && choix != 2 && choix != 3 && choix != 4) ;
 
-// finally = finction qui permet d'afficher un code meme dans une fonction apres un return
-//
+do {
+    //la fonction Number c'est juste pour que Js comprenne que c'est un nombre et pas une chaine de caractere. Sinon si ont fait le calcul 5+3 js renverra comme resulat->53
+    var premierNombre = Number(prompt("Tapez votre premier nombre :"));
+    var deuxiemeNombre = Number(prompt("Tapez votre deuxieme nombre :"));
+} while (isNaN(premierNombre)|| isNaN(deuxiemeNombre));
