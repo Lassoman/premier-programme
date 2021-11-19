@@ -1,4 +1,25 @@
 
+//Fonction pour additionner
+function addition(nombreA,nombreB){
+    return nombreA + nombreB;
+}
+//Fonction pour multiplier
+function mutiplication(nombreA,nombreB){
+    return nombreA * nombreB;
+}
+//Fonction pour soustraire
+function soustraction(nombreA,nombreB){
+    return nombreA - nombreB;
+}
+//Fonction pour soustraire
+function division(nombreA,nombreB){
+    if(nombreB == 0)
+    throw new Error("Impossible de diviser par 0");
+    return nombreA / nombreB;
+}
+
+
+
 
 do {
     
@@ -10,3 +31,29 @@ do {
     var premierNombre = Number(prompt("Tapez votre premier nombre :"));
     var deuxiemeNombre = Number(prompt("Tapez votre deuxieme nombre :"));
 } while (isNaN(premierNombre)|| isNaN(deuxiemeNombre));
+
+try {
+    
+    switch(choix){
+        case 1:
+            var resultat = addition(premierNombre,deuxiemeNombre);
+            break;
+        case 2:
+            var resultat = multiplication(premierNombre,deuxiemeNombre);
+            break;
+        case 3:
+            var resultat = soustraction(premierNombre,deuxiemeNombre);
+            break;
+        case 4:
+            var resultat = division(premierNombre,deuxiemeNombre);
+            break;
+        default:
+            throw new error("Une erreur est survenue.");
+    
+    }
+} catch (error) {
+    alert("Voici le resultat" + resultat);
+    alert(error);
+}
+
+
