@@ -1,22 +1,23 @@
 
-// DIFFERENCES ENTRE LES LET ET LES VAR
 
 
 
-let variableLet = "globale";
-var variableVar = "globale"
+function timer(secondes){ //10
 
+    if(secondes > 0){
+        console.log(secondes); //ici le resultat affiché sera 10
+        timer(secondes -1)// on rapelle la fonction dans la fonction. le resulat sera 9
+        // timer(8)
 
-if(true){
-
-
-let variableLet = "locale";
-var variableVar = "locale";
-
-console.log( "le résultat de let est :"+ variableLet)// résulat est = locale
-console.log( "le résultat de la var est :"+ variableVar)// résulat est = locale
+        //afficher(8)
+        //timer(7)
+    }
+    else {
+        console.log(secondes);
+    }
 }
 
+timer(10)
 
-console.log( "le résultat de let est :"+ variableLet)// résulat est = golable
-console.log( "le résultat de la var est :"+ variableVar)// résulat est = locale
+
+//ON AURAIT PU REALISER CE TIMER AVEC UNE BOUCLE FOR
