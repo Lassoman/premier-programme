@@ -1,21 +1,17 @@
-//LES BOUCLES DO-WHILE
+// La bouclor For
+
+// for (let i = 0; i < 10; i++) {
+//   console.log( "voici le resulat" +i)
+// }
 
 
 
-//les boucles do-while sont identiques au boucle while sauf que la condition a l'interieu s'execute au moins 1 foois
+function chiffre(nombre) {
 
-//1ER EXEMPLE
+   
+    for (var i=0; i<nombre; i++){
+        console.log(i);
+    }
+}
 
-// do{
-//     console.log('test')
-// }while (false) 
-
-// ici meme si on a mit false la boucle s'execute une premiere fois
-
-do {
-
-    var prenom = prompt('Quel est votre prénom ?');
-
-} while(prenom == "" || prenom == null)
-
-alert('Bonjour ' + prenom);
+chiffre(10);
