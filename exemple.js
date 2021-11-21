@@ -19,8 +19,9 @@ function division(nombreA,nombreB){
 }
 
 
-
-
+// On rentre dans la boucle principale
+let restart = false; // Cette variable vaut false ce qui veut dire que par défaut, nous ne reproposons par un calcul.
+do{
 do {
     
     var choix = Number(prompt("Que souhaitez vous faire ? :\n\n1-addition \n2-Multiplication \n3-Soustraction \n4-Division"));
@@ -39,7 +40,7 @@ try {
             var resultat = addition(premierNombre,deuxiemeNombre);
             break;
         case 2:
-            var resultat = multiplication(premierNombre,deuxiemeNombre);
+            var resultat = mutiplication(premierNombre,deuxiemeNombre);
             break;
         case 3:
             var resultat = soustraction(premierNombre,deuxiemeNombre);
@@ -49,11 +50,13 @@ try {
             break;
         default:
             throw new error("Une erreur est survenue.");
-    
     }
+    alert("Voici le resultat :" + resultat);
 } catch (error) {
-    alert("Voici le resultat" + resultat);
     alert(error);
 }
+
+restart =confirm("Voulez vous continuer  ?")//c'est un booléen 
+}while (restart) //donc si bool est = true on recommence
 
 
