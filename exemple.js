@@ -2,22 +2,13 @@
 
 
 
-function timer(secondes){ //10
-
-    if(secondes > 0){
-        console.log(secondes); //ici le resultat affiché sera 10
-        timer(secondes -1)// on rapelle la fonction dans la fonction. le resulat sera 9
-        // timer(8)
-
-        //afficher(8)
-        //timer(7)
+function somme(nombre) {
+    if(nombre == 1){
+        return 1;
     }
-    else {
-        console.log(secondes);
-    }
+
+    return nombre + somme(nombre -1);
 }
 
-timer(10)
-
-
+console.log(somme(2));
 //ON AURAIT PU REALISER CE TIMER AVEC UNE BOUCLE FOR
